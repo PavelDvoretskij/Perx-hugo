@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <h2 class="advantages__title title">{{ .Params.advantagesTitle }}</h2>
+    <div class="advantages__slider">
+        <div class="swiper-wrapper">
+
+            {{ range .Params.advantagesSlides }}
+            {{ $icon := .index }}
+            <div class="swiper-slide advantages__adv-slide adv-slide">
+                <div class="adv-slide__img-container">
+                    {{ partial $icon . }}
+                </div>
+                <h3 class="adv-slide__title">{{ .title }}</h3>
+                <p class="adv-slide__desc">{{ .text }}</p></div>
+            {{ end }}
+
+        </div>
+        <div class="advantages__pagination"></div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.Language }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+<header class="header">
+    {{ partial "header.html" . }}
+</header>
+
+<section class="banner banner__container">
+    {{ partial "banner.html" . }}
+</section>
+
+<section class="promotions promotions__container">
+{{ partial "promotions.html" . }}
+</section>
+
+<section class="map">
+{{ partial "map.html" . }}
+</section>
+
+<section class="advantages advantages__container">
+{{ partial "advantages.html" . }}
+</section>
+
+{{ partial "modal.html" . }}
+
+<main>
+    {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="footer">
+    {{ partial "footer.html" . }}
+    {{ partial "script-footer.html" . }}
+</footer>
+
+
+</body>
+</html>

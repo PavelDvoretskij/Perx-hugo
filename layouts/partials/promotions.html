@@ -1,0 +1,24 @@
+<div class="wrapper"><h2 class="promotions__title title">{{ .Params.promotionsTitle }}</h2>
+    <div class="promotions__swiper">
+        <div class="swiper-wrapper promotions__swiper-wrapper">
+
+            {{ range .Params.promotions }}
+            <div class="swiper-slide promotions__prom-slide prom-slide">
+                <div class="prom-slide__container"><img class="prom-slide__image" src="{{ .image }}" alt="Слайд">
+                    <div class="prom-slide__info"><h3 class="prom-slide__subtitle">{{ .title }}</h3>
+                        <p class="prom-slide__desc">{{ .text }}</p>
+                        <button class="prom-slide__btn"><span class="prom-slide__text-btn">{{ .linkText }}</span>
+                            {{ partial "icons/arrowPromotions" . }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+        <div class="prom-slide__pagination"></div>
+    </div>
+    <button class="promotions__btn btn"><span class="promotions__btn-title btn-title">{{ .Params.promotionsBtnText }}</span>
+        {{ partial "icons/arrowPromotions" . }}
+    </button>
+</div>

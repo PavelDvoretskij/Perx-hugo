@@ -1,0 +1,100 @@
+#map {
+  height: 470px;
+  width: 100%;
+}
+
+.map {
+  position: relative;
+  // .map__wrapper
+  &__wrapper {
+    padding: 0;
+    @include from(450px) {
+      @include wrapper(1440, 18, 84);
+    }
+  }
+  // .map__info-container
+  &__info-container {
+    position: absolute;
+    top: 70%;
+    max-width: 400px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(22, 22, 22, 0.2);
+    border-radius: 18px;
+    padding: 18px 18px 20px 18px;
+
+    @include from(1200px) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  // .map__title
+  &__title {
+    @include styles(font-size, 20, 28);
+    @include styles(line-height, 24, 28);
+    @include styles(margin-bottom, 12, 24);
+    color: $black-color;
+    font-weight: 700;
+  }
+
+  // .map__address
+  &__address {
+    @include styles(font-size, 14, 16);
+    @include styles(line-height, 21, 24);
+    @include styles(margin-bottom, 12, 24);
+    color: $dark-color;
+  }
+
+  // .map__modes
+  &__modes {
+    @include styles(column-gap, 41, 58);
+    @include styles(margin-bottom, 20, 24);
+    display: flex;
+  }
+
+  // .map__mode
+  &__mode {
+  }
+
+  // .map__btn
+  &__btn {
+    @include styles(width, 195, 207);
+    border: 2px solid $black-color;
+    @include styles(height, 42, 50);
+  }
+
+  // .map__btn-title
+  &__btn-title {
+  }
+}
+
+.mode {
+  // .mode__title
+  &__title {
+    font-size: 14px;
+    line-height: 14px;
+    color: $gray-color;
+    margin-bottom: 8px;
+  }
+
+  // .mode__tel
+  &__tel {
+    color: $black-color;
+    @include styles(font-size, 14, 16);
+    @include styles(line-height, 21, 24);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  // .mode__info
+  &__info {
+    color: $dark-color;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+
+.btn-title {
+}
